@@ -1,26 +1,31 @@
-# Delphi build files and executables
+# Compilados Delphi 7
 *.exe
 *.dll
 *.dcu
-*.~*
-*.dsk
-*.cfg
-*.local
-*.identcache
+*.bpl
+*.dcp
 
-# Diretórios de build
+# Arquivos temporários e de backup
+*.~*
+*.bak
+*.tmp
+*.map
+*.tds
+
+# Arquivos de configuração e projetos locais
+*.cfg
+*.dsk
+
+# Histórico e recuperação
 __history/
 __recovery/
+
+# Diretórios de build (caso existam)
 Debug/
 Release/
 Win32/
 x64/
 
-# Arquivos do sistema
-.DS_Store
+# Arquivos do sistema operacional
 Thumbs.db
-
-# Arquivos pessoais
-*.tds
-*.map
-*.bak
+.DS_Store
