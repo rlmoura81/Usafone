@@ -1,0 +1,228 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{718F12A1-4C13-46D9-B6BB-9DB1EC5674BA}</ProjectGuid>
+        <MainSource>usafone.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <TargetedPlatforms>1025</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>18.0</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_S>false</DCC_S>
+        <DCC_E>false</DCC_E>
+        <DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+        <DCC_N>true</DCC_N>
+        <DCC_DebugInformation>1</DCC_DebugInformation>
+        <DCC_K>false</DCC_K>
+        <DCC_F>false</DCC_F>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;Data.Win;$(DCC_Namespace)</DCC_Namespace>
+        <SanitizedProjectName>usafone</SanitizedProjectName>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_UsePackage>vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;dsnapcon;vcldb;soaprtl;VclSmp;dbexpress;dbxcds;inetdb;bdertl;vcldbx;webdsnap;websnap;adortl;ibxpress;teeui;teedb;tee;dss;visualclx;visualdbclx;vclactnband;vclshlctrls;IntrawebDB_50_70;Intraweb_50_70;Rave50CLX;Rave50VCL;dclOfficeXP;RLibWinD7vcl;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <Icon_MainIcon>usafone_Icon.ico</Icon_MainIcon>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Icon_MainIcon>usafone_Icon.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <AppEnableHighDPI>true</AppEnableHighDPI>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_Optimize>false</DCC_Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <AppEnableHighDPI>true</AppEnableHighDPI>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="untPadraoGeral.pas">
+            <Form>FormPadrao</Form>
+        </DCCReference>
+        <DCCReference Include="untPrincipal.pas">
+            <Form>FormPrincipal</Form>
+        </DCCReference>
+        <DCCReference Include="untCidade.pas">
+            <Form>FormCidade</Form>
+        </DCCReference>
+        <DCCReference Include="untUnidade.pas">
+            <Form>FormUnidade</Form>
+        </DCCReference>
+        <DCCReference Include="untUsuario.pas">
+            <Form>FormUsuario</Form>
+        </DCCReference>
+        <DCCReference Include="untOperadora.pas">
+            <Form>FormOperadora</Form>
+        </DCCReference>
+        <DCCReference Include="untMarca.pas">
+            <Form>FormMarca</Form>
+        </DCCReference>
+        <DCCReference Include="untModelo.pas">
+            <Form>FormModelo</Form>
+        </DCCReference>
+        <DCCReference Include="untAparelhos.pas">
+            <Form>FormAparelhos</Form>
+        </DCCReference>
+        <DCCReference Include="untChip.pas">
+            <Form>FormChip</Form>
+        </DCCReference>
+        <DCCReference Include="untAgenda.pas">
+            <Form>FormAgenda</Form>
+        </DCCReference>
+        <DCCReference Include="untListaTelefone.pas">
+            <Form>FormListaTelefone</Form>
+        </DCCReference>
+        <DCCReference Include="untDM.pas">
+            <Form>dm</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="untEstoque.pas">
+            <Form>FormEstoque</Form>
+        </DCCReference>
+        <DCCReference Include="untPadraoRelatorio.pas">
+            <Form>FormRelPadrao</Form>
+        </DCCReference>
+        <DCCReference Include="untRelCidade.pas">
+            <Form>FormRelCidade</Form>
+        </DCCReference>
+        <DCCReference Include="untRelAparelho.pas">
+            <Form>FormRelAparelhos</Form>
+        </DCCReference>
+        <DCCReference Include="untRelListaTelefone.pas">
+            <Form>FormRelListaTelefone</Form>
+        </DCCReference>
+        <DCCReference Include="untRelChip.pas">
+            <Form>FormRelChip</Form>
+        </DCCReference>
+        <DCCReference Include="untRelAgenda.pas">
+            <Form>FormRelAgenda</Form>
+        </DCCReference>
+        <DCCReference Include="untRelMarca.pas">
+            <Form>FormRelMarca</Form>
+        </DCCReference>
+        <DCCReference Include="untRelModelo.pas">
+            <Form>FormRelModelo</Form>
+        </DCCReference>
+        <DCCReference Include="untRelOperadora.pas">
+            <Form>FormRelOperadora</Form>
+        </DCCReference>
+        <DCCReference Include="untRelUnidade.pas">
+            <Form>FormRelUnidade</Form>
+        </DCCReference>
+        <DCCReference Include="untRelUsuario.pas">
+            <Form>FormRelUsuario</Form>
+        </DCCReference>
+        <DCCReference Include="untAcesso.pas">
+            <Form>FormAcesso</Form>
+        </DCCReference>
+        <DCCReference Include="untRelEstoque.pas">
+            <Form>FormRelEstoque</Form>
+        </DCCReference>
+        <DCCReference Include="untLogin.pas">
+            <Form>FormLogin</Form>
+        </DCCReference>
+        <DCCReference Include="untSenha.pas">
+            <Form>FormSenha</Form>
+        </DCCReference>
+        <DCCReference Include="untGasto.pas">
+            <Form>FormGasto</Form>
+        </DCCReference>
+        <DCCReference Include="untRelGasto.pas">
+            <Form>FormRelGasto</Form>
+        </DCCReference>
+        <DCCReference Include="untBlackberry.pas">
+            <Form>FormBlackberry</Form>
+        </DCCReference>
+        <DCCReference Include="untRelBlackberry.pas">
+            <Form>FormRelBlackberry</Form>
+        </DCCReference>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">usafone.dpr</Source>
+                </Source>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="iOSDevice64">True</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
