@@ -1,0 +1,26 @@
+# Delphi build files and executables
+*.exe
+*.dll
+*.dcu
+*.~*
+*.dsk
+*.cfg
+*.local
+*.identcache
+
+# Diretórios de build
+__history/
+__recovery/
+Debug/
+Release/
+Win32/
+x64/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos pessoais
+*.tds
+*.map
+*.bak
